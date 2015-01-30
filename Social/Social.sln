@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Domain", "Social.Domain\Social.Domain.csproj", "{8FFBF908-D067-4021-A275-992F0E867C41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Domain", "Social.Domain\Social.Domain.csproj", "{95BDA4A3-326C-49B8-9DE2-A487BA3A47F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.WebUI", "Social.WebUI\Social.WebUI.csproj", "{9CF971DD-3194-4323-A4A8-A3A983EE1450}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8FFBF908-D067-4021-A275-992F0E867C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8FFBF908-D067-4021-A275-992F0E867C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8FFBF908-D067-4021-A275-992F0E867C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8FFBF908-D067-4021-A275-992F0E867C41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95BDA4A3-326C-49B8-9DE2-A487BA3A47F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95BDA4A3-326C-49B8-9DE2-A487BA3A47F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95BDA4A3-326C-49B8-9DE2-A487BA3A47F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95BDA4A3-326C-49B8-9DE2-A487BA3A47F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CF971DD-3194-4323-A4A8-A3A983EE1450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CF971DD-3194-4323-A4A8-A3A983EE1450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CF971DD-3194-4323-A4A8-A3A983EE1450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CF971DD-3194-4323-A4A8-A3A983EE1450}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

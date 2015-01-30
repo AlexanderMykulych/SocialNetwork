@@ -1,0 +1,5 @@
+E:\AllProject\SocialNet\Social\Social.Domain\obj\Debug\Social.Domain.csprojResolveAssemblyReference.cache
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Debug\Social.Domain.dll
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Debug\Social.Domain.pdb
+E:\AllProject\SocialNet\Social\Social.Domain\obj\Debug\Social.Domain.dll
+E:\AllProject\SocialNet\Social\Social.Domain\obj\Debug\Social.Domain.pdb
