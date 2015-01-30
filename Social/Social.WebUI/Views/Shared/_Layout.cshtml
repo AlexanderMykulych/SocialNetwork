@@ -13,7 +13,14 @@
 
         <div class="container-fluid">
         	<header class="row">
-
+                <div class="col-md-3 text-left title">@ViewBag.Title</div>
+                <div class="col-md-6 col-md-offset-1 text-left">@Html.ActionLink("Sweet Home", "Index", "Home", null, new { @class = "header-title" })</div>
+                <div class="col-md-2 user-info">
+                    <div class="row">
+                        @Html.Partial("_LoginPartial")
+                        
+                    </div>
+                </div>
             </header>
         	<div class="row" id="body">
         	    @RenderBody()
@@ -21,5 +28,5 @@
         	<footer class="row"></footer>
         </div>
     </body>
-   
+   @RenderSection("Scripts", false)
 </html>
