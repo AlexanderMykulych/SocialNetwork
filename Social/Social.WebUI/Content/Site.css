@@ -31,3 +31,22 @@ a.header-title:hover{
 .user-name{
     margin: 5px 0 0 10px;
 }
+
+.submit-btn{
+    margin: 10px;
+}
+
+.chatBody{
+    height: 80%;
+    width: 50%;
+    position: fixed;
+}
+
+.chat-message-dody{
+    overflow-y: scroll;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    height: 90%;
+    position: relative;
+}
+

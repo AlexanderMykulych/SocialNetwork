@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="height:20px;"></div>
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8" id="chat">
+                @RenderBody()
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-md-offset-1" id="userInfo" style="height:300px; background-size: cover;">
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+</body>
+</html>

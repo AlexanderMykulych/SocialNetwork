@@ -78,3 +78,9 @@ E:\AllProject\SocialNet\Social\Social.WebUI\bin\zh-Hant\System.Spatial.resources
 E:\AllProject\SocialNet\Social\Social.WebUI\obj\Debug\Social.WebUI.csprojResolveAssemblyReference.cache
 E:\AllProject\SocialNet\Social\Social.WebUI\obj\Debug\Social.WebUI.dll
 E:\AllProject\SocialNet\Social\Social.WebUI\obj\Debug\Social.WebUI.pdb
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\EntityFramework.SqlServer.dll
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\EntityFramework.SqlServer.xml
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Ninject.dll
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Social.Domain.dll
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Social.Domain.pdb
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Ninject.xml

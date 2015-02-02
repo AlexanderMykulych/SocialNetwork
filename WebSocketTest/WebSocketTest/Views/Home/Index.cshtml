@@ -1,0 +1,107 @@
+﻿@*@{
+        ViewBag.Title = "Index";
+    }
+
+    <h2>Index</h2>
+    <script>
+        //var webSocket = new WebSocket("ws://" + window.location.hostname +"/WebSocketTest/ChatHandler.cs");
+
+        //webSocket.onopen = function(e)
+        //{
+        //    alert("Open!");
+        //    webSocket.send("Hello World!!!");
+        //}
+
+        //webSocket.onmessage = function(e)
+        //{
+        //    alert(e.data);
+        //}
+
+        //webSocket.onclose = function(e)
+        //{
+        //    alert("on close");
+        //}
+
+        //var ws;
+        //$().ready(function () {
+        //    $("#btnConnect").click(function () {
+        //        $("#spanStatus").text("connecting");
+        //        ws = new WebSocket("ws://" + window.location.hostname +
+        //            "/Mvc4WSChat/api/WSChat");
+        //        ws.onopen = function () {
+        //            $("#spanStatus").text("connected");
+        //        };
+        //        ws.onmessage = function (evt) {
+        //            $("#spanStatus").text(evt.data);
+        //        };
+        //        ws.onerror = function (evt) {
+        //            $("#spanStatus").text(evt.message);
+        //        };
+        //        ws.onclose = function () {
+        //            $("#spanStatus").text("disconnected");
+        //        };
+        //    });
+        //    $("#btnSend").click(function () {
+        //        if (ws.readyState == WebSocket.OPEN) {
+        //            ws.send($("#textInput").val());
+        //        }
+        //        else {
+        //            $("#spanStatus").text("Connection is closed");
+        //        }
+        //    });
+        //    $("#btnDisconnect").click(function () {
+        //        ws.close();
+        //    });
+        //});
+    </script>*@
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script type="text/javascript" src="Scripts/jquery-1.9.0.js"></script>
+    <script type="text/javascript">
+        var ws;
+        $().ready(function () {
+            $("#btnConnect").click(function () {
+                $("#spanStatus").text("connecting");
+                ws = new WebSocket("ws://" + window.location.hostname + ":" + window.location.port + "/api/WsChat");
+                ws.onopen = function () {
+                    $("#spanStatus").text("connected");
+                };
+                ws.onmessage = function (evt) {
+                    $("#spanStatus").text(evt.data);
+                };
+                ws.onerror = function (evt) {
+                    $("#spanStatus").text(evt.message);
+                };
+                ws.onclose = function () {
+                    $("#spanStatus").text("disconnected");
+                };
+            });
+            $("#btnSend").click(function () {
+                if (ws.readyState == WebSocket.OPEN) {
+                    ws.send($("#textInput").val());
+                }
+                else {
+                    $("#spanStatus").text("Connection is closed");
+                }
+            });
+            $("#btnDisconnect").click(function () {
+                ws.close();
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="Connect" id="btnConnect" />
+    <input type="button" value="Disconnect" id="btnDisconnect" /><br />
+    <input type="text" id="textInput" />
+    <input type="button" value="Send" id="btnSend" /><br />
+    <span id="spanStatus">(display)</span>
+</body>
+</html>

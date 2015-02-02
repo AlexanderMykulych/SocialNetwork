@@ -10,6 +10,7 @@ using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 using Social.WebUI.Filters;
 using Social.WebUI.Models;
+using Social.Domain.DataBase;
 
 namespace Social.WebUI.Controllers
 {
@@ -17,8 +18,13 @@ namespace Social.WebUI.Controllers
     [InitializeSimpleMembership]
     public class AccountController : Controller
     {
+        IUser_Db _db;
         //
         // GET: /Account/Login
+        public AccountController(IUser_Db db)
+        {
+            _db = db;
+        }
 
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
@@ -37,6 +43,7 @@ namespace Social.WebUI.Controllers
         {
             if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
             {
+                _db.AddUser(model.UserName);
                 return RedirectToLocal(returnUrl);
             }
 

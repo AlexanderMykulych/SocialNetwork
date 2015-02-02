@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Social.WebUI.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,6 +24,8 @@ namespace Social.WebUI
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+
+            ControllerBuilder.Current.SetControllerFactory(new NinjectFactory());
         }
     }
 }

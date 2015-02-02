@@ -1,5 +1,35 @@
-﻿@{
-    ViewBag.Title = "Index";
+﻿@model Social.WebUI.ViewModel.Home.VM_Messages
+@{
+    ViewBag.Title = "Chat";
+    Layout = "~/Views/Shared/_ChatLayout.cshtml";
 }
-
-
+<div class="chatBody panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">@User.Identity.Name</h3>
+    </div>
+    
+    	<div class="chat-message-dody">
+    		<ul class="list-group">
+    		    @foreach (var msg in Model.Messages)
+    		    {
+    		        <li class="list-group-item list-group-item-info">
+    		            @msg.UserName : @msg.Message
+    		        </li>
+    		    }
+    		</ul>
+    	</div>
+    	<div class="chat-form-body">
+    	    @using (Html.BeginForm("NewMessage", "Home", FormMethod.Get)) 
+    	    { 
+    		    <input type="hidden" name="UserName" value= "@User.Identity.Name" />
+                
+    		    <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="submit" class="submit-btn btn btn-primary" />
+                    </span>
+    		    	<textarea name ="Message" class="form-control" rows="3"></textarea>
+    		    	
+    		    </div>
+    	    }
+    	</div>
+</div>
