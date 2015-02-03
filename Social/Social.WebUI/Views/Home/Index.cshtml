@@ -3,9 +3,48 @@
     ViewBag.Title = "Chat";
     Layout = "~/Views/Shared/_ChatLayout.cshtml";
 }
+@*<script>
+    var ws;
+    $(document).ready(function () {
+
+        var panel = $(".panel-title");
+        panel.text("connecting...");
+
+        ws = new WebSocket("ws://" + window.location.hostname + ":" + window.location.port + "/api/WsChat");
+        ws.onopen = function () {
+            panel.text("connected!");
+        };
+
+
+        ws.onmessage = function (evt) {
+            $(".panel-t").text(evt.data);
+        };
+
+
+        ws.onerror = function (evt) {
+            $(".submit-btn").text(evt.message);
+        };
+
+
+        ws.onclose = function () {
+            panel.text("disconnected");
+        };
+
+        $(".submit-btn").click(function () {
+            if (ws.readyState == WebSocket.OPEN) {
+                ws.send($("#user-name").attr("value") + ":" + $(".text-message").val());
+            }
+            else {
+                panel.text("Connection is closed!");
+            }
+        });
+
+    });
+</script>*@
 <div class="chatBody panel panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title">@User.Identity.Name</h3>
+        <h3 class="panel-t"></h3>
     </div>
     
     	<div class="chat-message-dody">
@@ -19,17 +58,29 @@
     		</ul>
     	</div>
     	<div class="chat-form-body">
-    	    @using (Html.BeginForm("NewMessage", "Home", FormMethod.Get)) 
-    	    { 
-    		    <input type="hidden" name="UserName" value= "@User.Identity.Name" />
+    	    @*@using (Html.BeginForm("NewMessage", "Home"))
+            {*@ 
+                <div class="hidden-id"></div>
+    		    <input type="hidden" name="UserName" id="user-name" value= "@User.Identity.Name" />
                 
     		    <div class="input-group">
                     <span class="input-group-addon">
                         <input type="submit" class="submit-btn btn btn-primary" />
                     </span>
-    		    	<textarea name ="Message" class="form-control" rows="3"></textarea>
+    		    	<textarea name ="Message" class="form-control text-message" rows="3"></textarea>
     		    	
     		    </div>
-    	    }
-    	</div>
+             @*}*@
+       	</div>
+    
 </div>
+<div id="chatures">
+
+</div>
+<script src="~/Scripts/jquery-1.9.0.js"></script>
+<script src="~/Scripts/jquery.signalR-2.2.0.js"></script>
+<script src="~/signalr/hubs"></script>
+<script src="~/Scripts/jsr.js"></script>
+@*@section Scripts {
+    @Scripts.Render("~/Content/wbc.js")
+}*@

@@ -84,3 +84,14 @@ E:\AllProject\SocialNet\Social\Social.WebUI\bin\Ninject.dll
 E:\AllProject\SocialNet\Social\Social.WebUI\bin\Social.Domain.dll
 E:\AllProject\SocialNet\Social\Social.WebUI\bin\Social.Domain.pdb
 E:\AllProject\SocialNet\Social\Social.WebUI\bin\Ninject.xml
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Microsoft.Owin.dll
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Microsoft.Owin.Security.dll
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Owin.dll
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Microsoft.Owin.xml
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\Microsoft.Owin.Security.xml

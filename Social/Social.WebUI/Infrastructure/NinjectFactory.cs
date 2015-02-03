@@ -12,6 +12,13 @@ namespace Social.WebUI.Infrastructure
     {
         private IKernel kernel;
 
+        public IKernel Kerner
+        {
+            get
+            {
+                return kernel;
+            }
+        }
         public NinjectFactory()
         {
             kernel = new StandardKernel();
@@ -28,6 +35,10 @@ namespace Social.WebUI.Infrastructure
         private void AddBinds()
         {
             kernel.Bind<IUser_Db>().To<Users>();
+            
+            
         }
+
+
     }
 }

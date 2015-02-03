@@ -11,3 +11,6 @@ E:\AllProject\SocialNet\Social\Social.Domain\bin\Debug\EntityFramework.SqlServer
 E:\AllProject\SocialNet\Social\Social.Domain\obj\Debug\Social.Domain.Migrations.AddMessage.resources
 E:\AllProject\SocialNet\Social\Social.Domain\obj\Debug\Social.Domain.csproj.GenerateResource.Cache
 E:\AllProject\SocialNet\Social\Social.Domain\obj\Debug\Social.Domain.Migrations.UserMessage.resources
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Debug\Microsoft.Owin.dll
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Debug\Owin.dll
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Debug\Microsoft.Owin.xml
