@@ -3,48 +3,11 @@
     ViewBag.Title = "Chat";
     Layout = "~/Views/Shared/_ChatLayout.cshtml";
 }
-@*<script>
-    var ws;
-    $(document).ready(function () {
 
-        var panel = $(".panel-title");
-        panel.text("connecting...");
-
-        ws = new WebSocket("ws://" + window.location.hostname + ":" + window.location.port + "/api/WsChat");
-        ws.onopen = function () {
-            panel.text("connected!");
-        };
-
-
-        ws.onmessage = function (evt) {
-            $(".panel-t").text(evt.data);
-        };
-
-
-        ws.onerror = function (evt) {
-            $(".submit-btn").text(evt.message);
-        };
-
-
-        ws.onclose = function () {
-            panel.text("disconnected");
-        };
-
-        $(".submit-btn").click(function () {
-            if (ws.readyState == WebSocket.OPEN) {
-                ws.send($("#user-name").attr("value") + ":" + $(".text-message").val());
-            }
-            else {
-                panel.text("Connection is closed!");
-            }
-        });
-
-    });
-</script>*@
 <div class="chatBody panel panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title">@User.Identity.Name</h3>
-        <h3 class="panel-t"></h3>
+        <h3 class="panel-t">SH: Main Chat</h3>
     </div>
     
     	<div class="chat-message-dody">

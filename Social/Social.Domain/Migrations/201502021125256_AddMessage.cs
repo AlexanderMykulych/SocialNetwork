@@ -7,25 +7,16 @@ namespace Social.Domain.Migrations
     {
         public override void Up()
         {
-            CreateTable(
-                "dbo.Messages",
-                c => new
-                    {
-                        id = c.Int(nullable: false, identity: true),
-                        Text = c.String(),
-                        UserId = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.id)
-                .ForeignKey("dbo.Users", t => t.UserId, cascadeDelete: true)
-                .Index(t => t.UserId);
+
+            AddColumn("dbo.UserProfile", "Image", c => c.Binary());
+            AddColumn("dbo.UserProfile", "ImageType", c => c.String());
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Messages", "UserId", "dbo.Users");
-            DropIndex("dbo.Messages", new[] { "UserId" });
-            DropTable("dbo.Messages");
+            DropColumn("dbo.UserProfile", "ImageType");
+            DropColumn("dbo.UserProfile", "Image");
         }
     }
 }

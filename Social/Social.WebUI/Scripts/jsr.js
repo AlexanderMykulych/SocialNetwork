@@ -4,12 +4,22 @@
     
     chat.client.addMessage = function (name, message) {
         
-        console.log("addMessage");
-
-        $('.list-group').append('<li class="list-group-item list-group-item-info">' + htmlEncode(name)
+        console.log("addMessage"); 
+        var html_name = htmlEncode(name);
+        if (name.toLowerCase() == $("#user-name").val().toLowerCase())
+            html_name = '<strong>' + htmlEncode(name) + '</strong>';
+        var arr = new Array();
+        arr[0] = "info";
+        arr[1] = "success";
+        arr[2] = "warning";
+        arr[3] = "danger";
+        var min = 0, max = 3;
+        var rand = Math.round(min - 0.5 + Math.random() * (max - min + 1));
+        console.log('<li class="list-group-item list-group-item-' + arr[rand] + '">');
+        $('.list-group').append('<li class="list-group-item list-group-item-' + arr[rand] + '">' + html_name
             + ':' + htmlEncode(message) + '</li>');
        // $(".chat-message-dody").scrollTop = $(".chat-message-dody").scrollHeight;
-        $(".chat-message-dody").scrollTop(99999);
+        $(".chat-message-dody").scrollTop(999999);
     };
 
     
@@ -39,7 +49,7 @@
         $('.' + id).remove();
     }
 
-    // Открываем соединение
+    // Open connection
     $.connection.hub.start().done(function () {
         console.log("done");
         $('.submit-btn').click(function () {
@@ -48,17 +58,7 @@
             $('.text-message').val('');
         });
 
-        // обработка логина
-        //$("#btnLogin").click(function () {
-
-        //    var name = $("#txtUserName").val();
-        //    if (name.length > 0) {
-        //        chat.server.connect(name);
-        //    }
-        //    else {
-        //        alert("Введите имя");
-        //    }
-        //});
+        
     });
 });
 

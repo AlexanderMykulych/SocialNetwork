@@ -26,6 +26,7 @@ namespace Social.Domain.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
         }
     }
 }

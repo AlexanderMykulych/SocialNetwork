@@ -16,6 +16,16 @@
 		    @Html.Partial("_ChangePasswordPartial")
 		}		
     </div>
+    <div class="col-md-4 col-md-offset-1">
+        @using (Html.BeginForm("Avatar", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input type="hidden" name="name" value="@User.Identity.Name" />
+            <input type="file" name="img_avatar"/>
+            <input type="hidden" name="str" value="123123123" />
+            <input type="submit" value="Load on server" />
+            <img class="img-thumbnail img-responsive" src="@Url.Action("GetImage", "Account", new { name = User.Identity.Name})" />
+        }
+    </div>
 </div>
 
 

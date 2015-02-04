@@ -25,6 +25,9 @@ namespace Social.WebUI.Models
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
         public string UserName { get; set; }
+
+        public byte[] Image { get; set; }
+        public string ImageType { get; set; }
     }
 
     public class RegisterExternalLoginModel
@@ -53,6 +56,8 @@ namespace Social.WebUI.Models
         [Display(Name = "Confirm new password")]
         [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+
     }
 
     public class LoginModel

@@ -147,6 +147,58 @@ namespace Social.WebUI.Controllers
         //
         // POST: /Account/Manage
 
+        private UsersContext db = new UsersContext();
+        
+        [HttpPost]
+
+        public ActionResult Avatar(HttpPostedFileBase img_avatar, string name, string str)
+        {
+            try
+            {
+
+                var user = db.UserProfiles.FirstOrDefault(x => x.UserName.ToLower() == name.ToLower());
+                if (user != null)
+                {
+                    if (img_avatar != null)
+                    {
+                        user.ImageType = img_avatar.ContentType;
+                        user.Image = new byte[img_avatar.ContentLength];
+                        img_avatar.InputStream.Read(user.Image, 0, img_avatar.ContentLength);
+                    }
+                    db.SaveChanges();
+
+                }
+            }
+            catch(Exception e)
+            {
+
+            }
+            return RedirectToAction("Manage", "Account", null);
+        }
+
+
+        public FileContentResult GetImage(string name)
+        {
+            UserProfile user = null;
+            using (UsersContext db = new UsersContext())
+            {
+                if (db.UserProfiles != null)
+                {
+                    user = db.UserProfiles
+                            .FirstOrDefault(x => x.UserName.ToLower() == name.ToLower());
+                            
+                }
+                if (user == null)
+                    return null;
+
+                if (user.Image == null)
+                    return null;
+            }
+
+            return File(user.Image, user.ImageType != null ? user.ImageType : "image/jpg");
+
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Manage(LocalPasswordModel model)

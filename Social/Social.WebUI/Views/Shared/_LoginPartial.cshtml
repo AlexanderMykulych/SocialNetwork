@@ -1,7 +1,9 @@
 ﻿@if (Request.IsAuthenticated) {
     <text>
         <div class="row">
-            <div class="col-md-6 user-image" style="background:#0094ff; height:100px; width:100px"></div>
+            <div class="col-md-6 user-image">
+                <img class="img-thumbnail" src="@Url.Action("GetImage", "Account", new { name = User.Identity.Name})" />
+            </div>
             <div class="col-md-6">
                 @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id="logoutForm" }))
                 {

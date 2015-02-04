@@ -214,6 +214,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\NinjectFactory.cs" />
+    <Compile Include="Migrations\201502040828264_AddImage.cs" />
+    <Compile Include="Migrations\201502040828264_AddImage.Designer.cs">
+      <DependentUpon>201502040828264_AddImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\ChatHub.cs" />
     <Compile Include="Models\listener.cs" />
@@ -362,6 +367,11 @@
       <Project>{95bda4a3-326c-49b8-9de2-a487ba3a47f7}</Project>
       <Name>Social.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201502040828264_AddImage.resx">
+      <DependentUpon>201502040828264_AddImage.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
