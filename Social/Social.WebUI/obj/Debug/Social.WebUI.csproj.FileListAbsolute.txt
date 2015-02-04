@@ -97,3 +97,9 @@ E:\AllProject\SocialNet\Social\Social.WebUI\obj\Debug\Social.WebUI.dll
 E:\AllProject\SocialNet\Social\Social.WebUI\obj\Debug\Social.WebUI.pdb
 E:\AllProject\SocialNet\Social\Social.WebUI\obj\Debug\Social.WebUI.Migrations.AddImage.resources
 E:\AllProject\SocialNet\Social\Social.WebUI\obj\Debug\Social.WebUI.csproj.GenerateResource.Cache
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\System.Net.Http.Formatting.dll
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\System.Web.Http.dll
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\System.Web.Http.WebHost.dll
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\System.Net.Http.Formatting.xml
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\System.Web.Http.xml
+E:\AllProject\SocialNet\Social\Social.WebUI\bin\System.Web.Http.WebHost.xml

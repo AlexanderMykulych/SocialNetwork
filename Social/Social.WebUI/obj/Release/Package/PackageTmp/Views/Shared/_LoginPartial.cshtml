@@ -1,0 +1,28 @@
+﻿@if (Request.IsAuthenticated) {
+    <text>
+        <div class="row">
+            <div class="col-md-6 user-image">
+                <img class="img-thumbnail" src="@Url.Action("GetImage", "Account", new { name = User.Identity.Name})" />
+            </div>
+            <div class="col-md-6">
+                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id="logoutForm" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <a id="btn-logout" class="btn btn-danger" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md btn btn-default user-name">
+                @Html.ActionLink(User.Identity.Name, "Manage", "Account", 
+                                routeValues: null, 
+                                htmlAttributes: new { @class = "username", title = "Manage" })
+            </div>
+        </div>
+        
+       
+    </text>
+} else {
+        <div>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class="btn btn-primary"})</div>
+        <div>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class="btn btn-primary"})</div>
+}

@@ -51,7 +51,7 @@ namespace Social.Domain.DataBase
 
         public void AddMessage(string UserName, string MessageText)
         {
-            var _user = UsersTable.FirstOrDefault(x => x.UserName == UserName);
+            var _user = UsersTable.FirstOrDefault(x => x.UserName.ToLower() == UserName.ToLower());
 
             if (_user != null)
             {

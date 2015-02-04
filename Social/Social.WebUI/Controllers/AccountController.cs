@@ -88,6 +88,7 @@ namespace Social.WebUI.Controllers
                 {
                     WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
                     WebSecurity.Login(model.UserName, model.Password);
+                    _db.AddUser(model.UserName);
                     return RedirectToAction("Index", "Home");
                 }
                 catch (MembershipCreateUserException e)

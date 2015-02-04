@@ -1,0 +1,17 @@
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Release\Social.Domain.dll.config
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Release\Social.Domain.dll
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Release\Social.Domain.pdb
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Release\EntityFramework.dll
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Release\EntityFramework.SqlServer.dll
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Release\Microsoft.Owin.dll
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Release\Owin.dll
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Release\EntityFramework.xml
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Release\EntityFramework.SqlServer.xml
+E:\AllProject\SocialNet\Social\Social.Domain\bin\Release\Microsoft.Owin.xml
+E:\AllProject\SocialNet\Social\Social.Domain\obj\Release\Social.Domain.csprojResolveAssemblyReference.cache
+E:\AllProject\SocialNet\Social\Social.Domain\obj\Release\Social.Domain.Migrations.AddMessage.resources
+E:\AllProject\SocialNet\Social\Social.Domain\obj\Release\Social.Domain.Migrations.UserMessage.resources
+E:\AllProject\SocialNet\Social\Social.Domain\obj\Release\Social.Domain.Migrations.Add_Image.resources
+E:\AllProject\SocialNet\Social\Social.Domain\obj\Release\Social.Domain.csproj.GenerateResource.Cache
+E:\AllProject\SocialNet\Social\Social.Domain\obj\Release\Social.Domain.dll
+E:\AllProject\SocialNet\Social\Social.Domain\obj\Release\Social.Domain.pdb
